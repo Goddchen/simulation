@@ -21,7 +21,7 @@ jobs:
         with:
           flutter-version: "3.0.4"
           channel: "stable"
-      - run: flutter build web --debug --web-renderer canvaskit -t lib/main.dart
+      - run: flutter build web --web-renderer canvaskit -t lib/main.dart
         working-directory: app/
   test:
     runs-on: ubuntu-22.04
