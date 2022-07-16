@@ -1,5 +1,7 @@
+import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:simulation/game.dart';
 
 void main() {
-  runApp(const MaterialApp());
+  runApp(GameWidget<SimulationGame>(game: SimulationGame()));
 }
