@@ -1,7 +1,7 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
-class World extends RectangleComponent {
+class ChessBoardWorld extends RectangleComponent {
   final Paint _evenPaint = Paint()..color = Colors.green;
   final Paint _oddPaint = Paint()..color = Colors.black;
 
