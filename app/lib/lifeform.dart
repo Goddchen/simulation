@@ -20,18 +20,29 @@ class LifeForm extends PositionComponent with KeyboardHandler {
   @override
   bool onKeyEvent(RawKeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
     super.onKeyEvent(event, keysPressed);
+    double offset = 8;
     Vector2 diff = Vector2(0, 0);
     if (keysPressed.contains(LogicalKeyboardKey.arrowDown)) {
-      diff.add(Vector2(0, 1));
+      if ((Vector2.copy(position)..add(Vector2(0, offset))).y <=
+          512 - size.toRect().height) {
+        diff.add(Vector2(0, offset));
+      }
     }
     if (keysPressed.contains(LogicalKeyboardKey.arrowUp)) {
-      diff.add(Vector2(0, -1));
+      if ((Vector2.copy(position)..add(Vector2(0, -offset))).y >= 0) {
+        diff.add(Vector2(0, -offset));
+      }
     }
     if (keysPressed.contains(LogicalKeyboardKey.arrowLeft)) {
-      diff.add(Vector2(-1, 0));
+      if ((Vector2.copy(position)..add(Vector2(-offset, 0))).x >= 0) {
+        diff.add(Vector2(-offset, 0));
+      }
     }
     if (keysPressed.contains(LogicalKeyboardKey.arrowRight)) {
-      diff.add(Vector2(1, 0));
+      if ((Vector2.copy(position)..add(Vector2(offset, 0))).x <=
+          1024 - size.toRect().width) {
+        diff.add(Vector2(offset, 0));
+      }
     }
     position.add(diff);
     return diff.length > 0;
