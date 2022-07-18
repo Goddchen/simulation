@@ -5,14 +5,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:collection/collection.dart';
+import 'package:simulation/rules.dart';
 
 part 'waveform_collapse_world.freezed.dart';
 
 class WaveformCollapseWorld extends RectangleComponent {
   final Paint _landPaint = Paint()..color = Colors.brown;
-  final Paint _oceanPaint = Paint()..color = Colors.blue;
-  final Paint _woodPaint = Paint()..color = Colors.green;
-  final Paint _stonePaint = Paint()..color = Colors.grey;
+  final Paint _rockPaint = Paint()..color = Colors.grey;
   late List<List<WaveformCollapseWorldTile>> _tiles;
   final double _tileWidth = 16;
 
@@ -34,10 +33,8 @@ class WaveformCollapseWorld extends RectangleComponent {
         canvas.drawRect(
           Rect.fromLTWH(x * _tileWidth, y * _tileWidth, _tileWidth, _tileWidth),
           tile.map(
-            ocean: (_) => _oceanPaint,
             land: (_) => _landPaint,
-            wood: (_) => _woodPaint,
-            stone: (_) => _stonePaint,
+            rock: (_) => _rockPaint,
           ),
         );
       }
@@ -57,9 +54,7 @@ class WaveformCollapseWorld extends RectangleComponent {
       for (int y = 0; y * _tileWidth < size.toRect().height; y++) {
         tileWaveForms[x].insert(y, <WaveformCollapseWorldTile>{
           const WaveformCollapseWorldTile.land(),
-          const WaveformCollapseWorldTile.ocean(),
-          const WaveformCollapseWorldTile.stone(),
-          const WaveformCollapseWorldTile.wood(),
+          const WaveformCollapseWorldTile.rock(),
         });
       }
     }
@@ -134,8 +129,6 @@ class WaveformCollapseWorld extends RectangleComponent {
 
 @freezed
 class WaveformCollapseWorldTile with _$WaveformCollapseWorldTile {
-  const factory WaveformCollapseWorldTile.ocean() = Ocean;
   const factory WaveformCollapseWorldTile.land() = Land;
-  const factory WaveformCollapseWorldTile.wood() = Wood;
-  const factory WaveformCollapseWorldTile.stone() = Stone;
+  const factory WaveformCollapseWorldTile.rock() = Rock;
 }

@@ -18,51 +18,39 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$WaveformCollapseWorldTile {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() ocean,
     required TResult Function() land,
-    required TResult Function() wood,
-    required TResult Function() stone,
+    required TResult Function() rock,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? ocean,
     TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
+    TResult Function()? rock,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ocean,
     TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
+    TResult Function()? rock,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Ocean value) ocean,
     required TResult Function(Land value) land,
-    required TResult Function(Wood value) wood,
-    required TResult Function(Stone value) stone,
+    required TResult Function(Rock value) rock,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
     TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
+    TResult Function(Rock value)? rock,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
     TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
+    TResult Function(Rock value)? rock,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -83,128 +71,6 @@ class _$WaveformCollapseWorldTileCopyWithImpl<$Res>
   final WaveformCollapseWorldTile _value;
   // ignore: unused_field
   final $Res Function(WaveformCollapseWorldTile) _then;
-}
-
-/// @nodoc
-abstract class _$$OceanCopyWith<$Res> {
-  factory _$$OceanCopyWith(_$Ocean value, $Res Function(_$Ocean) then) =
-      __$$OceanCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$OceanCopyWithImpl<$Res>
-    extends _$WaveformCollapseWorldTileCopyWithImpl<$Res>
-    implements _$$OceanCopyWith<$Res> {
-  __$$OceanCopyWithImpl(_$Ocean _value, $Res Function(_$Ocean) _then)
-      : super(_value, (v) => _then(v as _$Ocean));
-
-  @override
-  _$Ocean get _value => super._value as _$Ocean;
-}
-
-/// @nodoc
-
-class _$Ocean with DiagnosticableTreeMixin implements Ocean {
-  const _$Ocean();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'WaveformCollapseWorldTile.ocean()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'WaveformCollapseWorldTile.ocean'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Ocean);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() ocean,
-    required TResult Function() land,
-    required TResult Function() wood,
-    required TResult Function() stone,
-  }) {
-    return ocean();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? ocean,
-    TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
-  }) {
-    return ocean?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ocean,
-    TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
-    required TResult orElse(),
-  }) {
-    if (ocean != null) {
-      return ocean();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Ocean value) ocean,
-    required TResult Function(Land value) land,
-    required TResult Function(Wood value) wood,
-    required TResult Function(Stone value) stone,
-  }) {
-    return ocean(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
-    TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
-  }) {
-    return ocean?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
-    TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
-    required TResult orElse(),
-  }) {
-    if (ocean != null) {
-      return ocean(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Ocean implements WaveformCollapseWorldTile {
-  const factory Ocean() = _$Ocean;
 }
 
 /// @nodoc
@@ -253,10 +119,8 @@ class _$Land with DiagnosticableTreeMixin implements Land {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() ocean,
     required TResult Function() land,
-    required TResult Function() wood,
-    required TResult Function() stone,
+    required TResult Function() rock,
   }) {
     return land();
   }
@@ -264,10 +128,8 @@ class _$Land with DiagnosticableTreeMixin implements Land {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? ocean,
     TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
+    TResult Function()? rock,
   }) {
     return land?.call();
   }
@@ -275,10 +137,8 @@ class _$Land with DiagnosticableTreeMixin implements Land {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ocean,
     TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
+    TResult Function()? rock,
     required TResult orElse(),
   }) {
     if (land != null) {
@@ -290,10 +150,8 @@ class _$Land with DiagnosticableTreeMixin implements Land {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Ocean value) ocean,
     required TResult Function(Land value) land,
-    required TResult Function(Wood value) wood,
-    required TResult Function(Stone value) stone,
+    required TResult Function(Rock value) rock,
   }) {
     return land(this);
   }
@@ -301,10 +159,8 @@ class _$Land with DiagnosticableTreeMixin implements Land {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
     TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
+    TResult Function(Rock value)? rock,
   }) {
     return land?.call(this);
   }
@@ -312,10 +168,8 @@ class _$Land with DiagnosticableTreeMixin implements Land {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
     TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
+    TResult Function(Rock value)? rock,
     required TResult orElse(),
   }) {
     if (land != null) {
@@ -330,43 +184,43 @@ abstract class Land implements WaveformCollapseWorldTile {
 }
 
 /// @nodoc
-abstract class _$$WoodCopyWith<$Res> {
-  factory _$$WoodCopyWith(_$Wood value, $Res Function(_$Wood) then) =
-      __$$WoodCopyWithImpl<$Res>;
+abstract class _$$RockCopyWith<$Res> {
+  factory _$$RockCopyWith(_$Rock value, $Res Function(_$Rock) then) =
+      __$$RockCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$WoodCopyWithImpl<$Res>
+class __$$RockCopyWithImpl<$Res>
     extends _$WaveformCollapseWorldTileCopyWithImpl<$Res>
-    implements _$$WoodCopyWith<$Res> {
-  __$$WoodCopyWithImpl(_$Wood _value, $Res Function(_$Wood) _then)
-      : super(_value, (v) => _then(v as _$Wood));
+    implements _$$RockCopyWith<$Res> {
+  __$$RockCopyWithImpl(_$Rock _value, $Res Function(_$Rock) _then)
+      : super(_value, (v) => _then(v as _$Rock));
 
   @override
-  _$Wood get _value => super._value as _$Wood;
+  _$Rock get _value => super._value as _$Rock;
 }
 
 /// @nodoc
 
-class _$Wood with DiagnosticableTreeMixin implements Wood {
-  const _$Wood();
+class _$Rock with DiagnosticableTreeMixin implements Rock {
+  const _$Rock();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'WaveformCollapseWorldTile.wood()';
+    return 'WaveformCollapseWorldTile.rock()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-        .add(DiagnosticsProperty('type', 'WaveformCollapseWorldTile.wood'));
+        .add(DiagnosticsProperty('type', 'WaveformCollapseWorldTile.rock'));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Wood);
+        (other.runtimeType == runtimeType && other is _$Rock);
   }
 
   @override
@@ -375,36 +229,30 @@ class _$Wood with DiagnosticableTreeMixin implements Wood {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() ocean,
     required TResult Function() land,
-    required TResult Function() wood,
-    required TResult Function() stone,
+    required TResult Function() rock,
   }) {
-    return wood();
+    return rock();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? ocean,
     TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
+    TResult Function()? rock,
   }) {
-    return wood?.call();
+    return rock?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ocean,
     TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
+    TResult Function()? rock,
     required TResult orElse(),
   }) {
-    if (wood != null) {
-      return wood();
+    if (rock != null) {
+      return rock();
     }
     return orElse();
   }
@@ -412,163 +260,35 @@ class _$Wood with DiagnosticableTreeMixin implements Wood {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Ocean value) ocean,
     required TResult Function(Land value) land,
-    required TResult Function(Wood value) wood,
-    required TResult Function(Stone value) stone,
+    required TResult Function(Rock value) rock,
   }) {
-    return wood(this);
+    return rock(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
     TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
+    TResult Function(Rock value)? rock,
   }) {
-    return wood?.call(this);
+    return rock?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
     TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
+    TResult Function(Rock value)? rock,
     required TResult orElse(),
   }) {
-    if (wood != null) {
-      return wood(this);
+    if (rock != null) {
+      return rock(this);
     }
     return orElse();
   }
 }
 
-abstract class Wood implements WaveformCollapseWorldTile {
-  const factory Wood() = _$Wood;
-}
-
-/// @nodoc
-abstract class _$$StoneCopyWith<$Res> {
-  factory _$$StoneCopyWith(_$Stone value, $Res Function(_$Stone) then) =
-      __$$StoneCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$StoneCopyWithImpl<$Res>
-    extends _$WaveformCollapseWorldTileCopyWithImpl<$Res>
-    implements _$$StoneCopyWith<$Res> {
-  __$$StoneCopyWithImpl(_$Stone _value, $Res Function(_$Stone) _then)
-      : super(_value, (v) => _then(v as _$Stone));
-
-  @override
-  _$Stone get _value => super._value as _$Stone;
-}
-
-/// @nodoc
-
-class _$Stone with DiagnosticableTreeMixin implements Stone {
-  const _$Stone();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'WaveformCollapseWorldTile.stone()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'WaveformCollapseWorldTile.stone'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Stone);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() ocean,
-    required TResult Function() land,
-    required TResult Function() wood,
-    required TResult Function() stone,
-  }) {
-    return stone();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? ocean,
-    TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
-  }) {
-    return stone?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ocean,
-    TResult Function()? land,
-    TResult Function()? wood,
-    TResult Function()? stone,
-    required TResult orElse(),
-  }) {
-    if (stone != null) {
-      return stone();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Ocean value) ocean,
-    required TResult Function(Land value) land,
-    required TResult Function(Wood value) wood,
-    required TResult Function(Stone value) stone,
-  }) {
-    return stone(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
-    TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
-  }) {
-    return stone?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Ocean value)? ocean,
-    TResult Function(Land value)? land,
-    TResult Function(Wood value)? wood,
-    TResult Function(Stone value)? stone,
-    required TResult orElse(),
-  }) {
-    if (stone != null) {
-      return stone(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Stone implements WaveformCollapseWorldTile {
-  const factory Stone() = _$Stone;
+abstract class Rock implements WaveformCollapseWorldTile {
+  const factory Rock() = _$Rock;
 }
